@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Bio Card</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #img-asha {
+            height: 300px;
+            width: 300px;
+            border-radius: 50%;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .control-button {
+            padding: 15px;
+            border-radius: 15px;
+            background-color: pink;
+            border: 2px solid pink;
+            color: brown;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .control-button:hover {
+            color: white;
+            background-color: palevioletred;
+        }
+
+        .btn {
+            padding: 15px;
+            border-radius: 15px;
+            background-color: pink;
+            border: 2px solid pink;
+            color: brown;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            color: white;
+            background-color: palevioletred;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Interactive Bio Card</h1>
+    <p>Hiiii!! I am Asha</p>
+    <p id="age" style="display: none;">I am 18 years old</p>
+    <p id="full-name" style="display: none;">I forgot to write my surname so my full name is Asha Magar</p>
+    <div class="button-group">
+        <button class="control-button" onclick="document.getElementById('age').style.display='block'">click here to know
+            my age</button>
+        <button class="control-button" onclick="document.getElementById('full-name').style.display='block';">and here to
+            know my fullname</button>
+    </div>
+
+    <img id="img-asha" src="mee.jpg" alt="Asha">
+
+    <button class="btn" onclick="document.getElementById('img-asha').style.display='block'">click here for a
+        jumpscare</button>
+
+</body>
+
+</html>
