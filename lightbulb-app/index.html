@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Light Bulb App</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .lightbulb-image {
+        height: 300px;
+        width: 300px;
+      }
+
+      .control-button {
+        padding: 25px;
+        border: 2px solid palevioletred;
+        background-color: pink;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .control-button:hover {
+        background-color: rgb(81, 81, 103);
+        color: gainsboro;
+      }
+      .button-group {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mini Light Bulb App</h1>
+    <img
+      id="img"
+      src="bulb-off.png"
+      alt="Light bulb image"
+      class="lightbulb-image"
+    />
+    <p id="status">Click a button to switch the bulb</p>
+    <div class="button-group">
+      <button
+        class="control-button"
+        onclick="document.getElementById('img').src='bulb-on.png'; document.getElementById('status').innerHTML='The bulb is ON 💡'"
+      >
+        Turn on the bulb
+      </button>
+      <button
+        class="control-button"
+        onclick="document.getElementById('img').src='bulb-off.png'; document.getElementById('status').innerHTML='The bulb is OFF ❌'"
+      >
+        Turn off the bulb
+      </button>
+    </div>
+  </body>
+</html>
